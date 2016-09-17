@@ -8,7 +8,7 @@
 		<meta http-equiv="expires" content="0" />
 		<meta name="keywords" content="" />
 		<meta name="description" content="" />
-		<title>BMW專區首頁</title>
+		<title></title>
 		<link rel="stylesheet" type="text/css" href="http://news.u-car.com.tw/css/style.css" />
 		<link rel="stylesheet" type="text/css" href="http://news.u-car.com.tw/css/layout.css" />
 		<!--[if IE]>
@@ -86,7 +86,7 @@
 					logicid: 'ucarrec_item_view',
 					type: 'list',
 					act : 'view',
-					pid : '32027',
+					pid : '32029',
 					cat : 'article'
 				});
 				var _qevent = _qevent || [];
@@ -95,7 +95,7 @@
 					cid: 'ucarrec',
 					act: 'view',
 					uid: '',
-					pid: '32027',
+					pid: '32029',
 					cat: 'article'
 				});
 
@@ -117,6 +117,53 @@
 					var currentJs=document.getElementById('etu-recommender');
 					currentJs.parentNode.insertBefore(er, currentJs);
 				})();
+				</script>
+			
+		<script type="text/javascript">
+		$(document).ready(function () {
+			var intTop = $('.sidebottomad').offset().top;
+			var strTop = intTop + 'px';
+			$(window).scroll(function () {
+				var contentHeight = $('.contbody').height();
+				var sidebarHeight = $('.sidebar').height();
+					$('.sidebar').css({
+						'height': contentHeight + 'px'
+					});
+				var length = $('.contbody').height() - $('.sidebottomad').height() + $('.contbody').offset().top;
+				var scroll = $(this).scrollTop();
+				var height = $('.sidebottomad').height() + 'px';
+
+				if (scroll < intTop) {
+					$('.sidebottomad').css({
+						'position': 'relative',
+						'top': 'auto'
+					});
+
+				} else if (scroll > length) {
+					$('.sidebottomad').css({
+						'position': 'absolute',
+						'bottom': '0',
+						'top': 'auto'
+					});
+
+				} else {
+					$('.sidebottomad').css({
+						'position': 'relative',
+						'top': scroll - intTop + 'px'
+					});
+				}
+			});
+		});
+		</script>
+		<script type="text/javascript">
+			var _pop = _pop || [];
+			_pop.push(["_set_read_categoryName","news"]);
+
+			(function() {
+				var pa = document.createElement("script"); pa.type = "text/javascript"; pa.charset = "utf-8"; pa.async = true;
+				pa.src = window.location.protocol + "//api.popin.cc/searchbox/u-car.js";
+				var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(pa, s);
+			})();
 		</script>
 	</head>
 
@@ -167,7 +214,8 @@
 					</div>
 				</div>
 				
-                <div class="channel-title clearfix">
+				
+				<div class="channel-title clearfix">
 					<img src="http://feature.u-car.com.tw/images/ct-feature.gif" alt="專題報導" />
 					<div class="channel-search">
 						<form method="post" action="/search.asp"><input type="text" name="keywords" id="keywords" class="search-input" style="width:230px;" /><input type="submit" name="" value="搜尋 專題" class="search-button" /></form>
@@ -203,70 +251,180 @@
 				
 				<!--編輯區塊開始-->
 				<div class="content clearfix">
-				    <link rel="stylesheet" href="css/xuestyle.css">	
-					<div id="my-wrap">
-					    <div id="page-title">
-					        <img src="images/pic_banner.jpg" alt="BMW 3Series/4Series 徹底剖析">
-				        </div>
-				        <div id="box_video" style="background: url(../images/bg_video.jpg) no-repeat">
-				            <video class="my-video" width="480" height="270" controls>
+				
+                    <link rel="stylesheet" href="css/xuestyle.css">	
+                    <div id="my-wrap">
+                        <div id="page-title">
+                            <img src="images/pic_banner.jpg" alt="BMW 3Series/4Series 徹底剖析">
+                        </div>
+                        <div id="box_video" style="background: url(../images/bg_video.jpg) no-repeat">
+                            <video class="my-video" width="480" height="270" controls>
                                 <source src="video/test.ogg" type="video/ogg">
                                 <source src="media/BMW-3Series-2015-Advert.mp4" type="video/mp4">
                                 您的瀏覽器不支援此 HTML5 影片標籤</video>
-                        </div>
-                        
-                        <div id="box_analyze">
-                            <ul>
-                                <li>
-                                    <a href="content.html"><img src="images/pic_analyze-01.jpg" alt="*"></a>
-                                    <a href="content.html"><h4>BMW新一代3 Series有望2017法蘭克福車展亮相，將首度推出純電動車型</h4></a>
-                                    <p>BMW 自從開發旗下插電式油電混合動力系統跑車i8，就對油電混合動力研究出一番心得，BMW為3系列加入油電混合新成員330e...</p></li>
-                                <li>
-                                    <a href="content.html"><img src="images/pic_analyze-02.jpg" alt="*"></a>
-                                    <a href="content.html"><h4>BMW 330e 深藏不露，油電混合生力軍出陣</h4></a>
-                                    <p>BMW 自從開發旗下插電式油電混合動力系統跑車i8，就對油電混合動力研究出一番心得，BMW為3系列加入油電混合新成員330e...</p></li>
-                                <li>
-                                    <a href="content.html"><img src="images/pic_analyze-03.jpg" alt="*"></a>
-                                    <a href="content.html"><h4>這一次、變心毫不遲疑─BMW 340i 3.0T海外試駕</h4></a>
-                                    <p>BMW 自從開發旗下插電式油電混合動力系統跑車i8，就對油電混合動力研究出一番心得，BMW為3系列加入油電混合新成員330e...</p></li>
-                            </ul>
-                        </div>
-                        
-                        
-                        <div id="box_extend">
-                            <div id="extend-title" style="background: url(../images/bg_extend-title.png) no-repeat">
-                                <h3>延‧伸‧閱‧讀</h3></div>
-                            <div id="extend-list">
-                                <ul>
-                                    <li>
-                                        <a href="content-1.html"><img src="images/pic_extend-01.jpg" alt="*"></a>
-                                         <div class="extend-info">
-                                            <a href="content.html"><h4>動力更新、配備調整，BMW公佈2017年式4 Series規配及預售價格</h4></a>
-                                            <p>BMW臺灣總代理汎德繼2016年2月下旬公佈了國內販售全車系2016年式車型價格之後
-        ，日前再度公佈了旗下2017年式4 Series規配及預售價格，其中包含了4 Series Coupé、4 Series Gran Coupé及4 Series Convertible車系皆有所更動...</p>                                           
-                                         </div></li>
-                                    <li>
-                                        <a href="content-1.html"><img src="images/pic_extend-01.jpg" alt="*"></a>
-                                         <div class="extend-info">
-                                            <a href="content.html"><h4>動力更新、配備調整，BMW公佈2017年式4 Series規配及預售價格</h4></a>
-                                            <p>BMW臺灣總代理汎德繼2016年2月下旬公佈了國內販售全車系2016年式車型價格之後
-        ，日前再度公佈了旗下2017年式4 Series規配及預售價格，其中包含了4 Series Coupé、4 Series Gran Coupé及4 Series Convertible車系皆有所更動...</p>                                           
-                                         </div></li>
-                                </ul>
-                            </div>
-                            <div id="extend-adad"> 
-                                <img src="images/pic_abcar.jpg" alt="*">
-                            </div>    
-                        </div>
+                        </div>    
                     </div>
-	            </div><!--編輯區塊結束-->
+					
+					<!--文章區塊開始-->
+					<div class="contbody" style="padding-top:30px">
+						
+						<div class="banner"><h1>2016巴黎車展：Mercedes-AMG GT C Roadster定裝照亮相</h1></div>
+						
+						<div class="articleinfo">
+							<div class="author clearfix">
+								<div class="articleinfo_l"><em>撰文│吳加男</em></div>
+								<div class="articleinfo_r">點閱數：<span>1,043</span> 次</div>
+							</div>
+							<div class="postinfo clearfix">
+								<div class="articleinfo_l"><strong>2016/09/15</strong></div>
+								<div class="articleinfo_r share"><!--分享到：-->
+									<a href="javascript: void(window.open('http://www.facebook.com/share.php?u='.concat(encodeURIComponent(location.href)) ));" class="facebook">facebook</a>
+									<div class="g-plusone" data-size="medium" data-annotation="none"></div>
+									<script type="text/javascript">
+									  window.___gcfg = {lang: 'zh-TW'};
+									
+									  (function() {
+									    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+									    po.src = 'https://apis.google.com/js/platform.js';
+									    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+									  })();
+									</script>
+									<a href="javascript: void(window.open('http://www.plurk.com/?qualifier=shares&status=' .concat(encodeURIComponent(location.href)) .concat(' ') .concat('&#40;') .concat(encodeURIComponent(document.title)) .concat('&#41;')));" class="plurk">plurk</a>
+								</div>
+							</div>
+						</div>
+						
+						
+						
+						<!--文章內容開始-->
+						<div class="postcont">
+							<p>在先前，U-CAR曾報導即將在巴黎車展現身的Mercedes-AMG GT C Roadster車系，所釋出的預告版影片，如今，原廠正式公布了Mercedes-AMG GT C Roadster的定裝照片，同時將會有GT Roadster與GT C Roadster兩個車型版本，分別可輸出462匹以及510匹馬力。</p>
+                            <div class="newsphoto">
+                                <div><img class="lazy" src="http://news.u-car.com.tw/images/grey.gif" data-original="http://image.u-car.com.tw/articleimage_656554.jpg" border="0"></div>
+                                <div class="photocaption">Mercedes原廠正式公布了GT C Roadster的定裝照片，直柵式水箱罩設計則與GT R相同。</div>
+                            </div>
+                            <div class="newsphoto">
+                                <div><img class="lazy" src="http://news.u-car.com.tw//images/grey.gif" data-original="//image.u-car.com.tw/articleimage_656555.jpg" border="0"></div>
+                                <div class="photocaption">分有GT Roadster與GT C Roadster兩款車型，動力輸出分別為462匹以及510匹馬力。</div>
+                            </div>
+                            <p>Mercedes-AMG GT C Roadster延續了品牌敞篷車系的特色，有著類似SLS、SLR的設計感，同時GT C Roadster因應其敞篷機構的需求，針對車尾部分進行修改，不過整體而言還是承襲AMG GT車系的主要元素，讓人一眼就能認出。<br /></p>
+                            <p>GT C Roadster採用與稍早發表的Mercedes-AMG GT R相同的直柵式水箱罩設計，敞篷機構方面，則是Mercedes-AMG 全新設計的軟頂敞篷結構，以鋁鎂合金搭配3層織布材質製造，據原廠表示除了重量得以減輕，在車速50公里以下時，也僅需要11秒就能完成開篷或關蓬的程序，同時車主還得以選配黑色以外的軟蓬顏色。<br /></p>
+                            <div class="newsphoto">
+                                <div><img class="lazy" src="http://news.u-car.com.tw//images/grey.gif" data-original="//image.u-car.com.tw/articleimage_656556.jpg" border="0"></div>
+                                <div class="photocaption">GT C Roadster因應其敞篷機構的需求，針對車尾部分進行修改，不過整體而言還是承襲AMG GT車系的主要元素，讓人一眼就能認出。</div>
+                            </div>
+                            <div class="newsphoto">
+                                <div><img class="lazy" src="http://news.u-car.com.tw//images/grey.gif" data-original="//image.u-car.com.tw/articleimage_656557.jpg" border="0"></div>
+                                <div class="photocaption">在車速50公里以下時，僅需11秒就能完成開篷或關蓬的程序，同時車主還得以選配黑色以外的軟蓬顏色。</div>
+                            </div>
+                            <p>Mercedes-AMG GT C Roadster將會推出GT Roadster、及GT C Roadster兩個車型版本，均搭載4.0升V8雙渦輪引擎與AMG Speedshift DCT 7速雙離合器自手排變速箱，較為入門的GT Roadster車重為1,595公斤，可輸出462匹馬力與 61.2公斤米扭力，靜止加速至時速100公里為4 秒，極速為302公里。</p>
+                            
+                            <p>另一款較高定位的GT C Roadster版本車身重量為1,660公斤，可輸出510匹馬力與 66.3公斤米扭力，由靜止加速至時速100公里為3.7秒，極速為316公里。由此可知，GT Roadster與GT C Roadster的動力將比照Coupé版本的GT與GT S。<br /></p>
+                            <p>不過，GT C Roadster將擁有與GT R相同的主動式後輪轉向系統，車輛會依照駕駛狀況自動微調後輪束角最多達1.5度，來同步加強高速穩定性和過彎靈活性，這是Coupé所沒有的。</p>
+                            <div class="newsphoto">
+                                <div><img class="lazy" src="http://news.u-car.com.tw//images/grey.gif" data-original="//image.u-car.com.tw/articleimage_656558.jpg" border="0"></div>
+                                <div class="photocaption">GT C Roadster將擁有與GT R相同的主動式後輪轉向系統，有助於車輛動態表現。</div>
+                            </div>
+                            <p>從發表的內裝照片來看，GT C Roadster提供了Alcantara麂皮、Nappa 皮革、碳纖維飾版、亞光銀色飾版、鋼琴漆飾版等不同的標配與選配，同時車主也可選擇車內色調的配置，延續了品牌豪華感。</p>
+                            <div class="newsphoto">
+                                <div><img class="lazy" src="http://news.u-car.com.tw//images/grey.gif" data-original="//image.u-car.com.tw/articleimage_656560.jpg" border="0"></div>
+                            </div>
+                        </div>
+                        <!--文章內容結束-->
+						
+						
+						<!--延伸閱讀開始-->
+						<div class="related">
+							<div class="articleheadtitle">相．關．內．容</div>
+							<ul class="relatedlist">
+                                <li><span class="relatedtop">車壇新聞</span><a href="//news.u-car.com.tw/32010.html">2016巴黎車展：M-AMG GT敞篷版預告影片中現身</a><span>2016/9/13</span></li>
+                                <li><span class="relatedtop">車壇新聞</span><a href="//news.u-car.com.tw/30989.html">預計2017年發表上市，Mercedes-AMG GT將追加Roadster敞篷車款</a><span>2016/6/29</span></li>
+                                <li><span class="relatedtop">車壇新聞</span><a href="//news.u-car.com.tw/30950.html">競技化噬路獸，Mercedes-AMG GT R正式發表</a><span>2016/6/24</span></li>
+                                <li><span class="relatedtop">車壇新聞</span><a href="//news.u-car.com.tw/25653.html">新一代三芒星戰駒，Mercedes-AMG GT3賽車登場</a><span>2015/3/1</span></li>
+                                <li><span class="relatedtop">車壇新聞</span><a href="//news.u-car.com.tw/24259.html">瞄準911跑車級距，Mercedes-AMG GT正式現身</a><span>2014/9/10</span></li>
+                            </ul>
+						</div>
+						<!--延伸閱讀結束-->
+	                </div>
+	                <!--文章區塊結束-->
+	                
+	                
+					
+					<!--側邊攔開始-->
+					<div class="sidebar">
+						<div class="sidelink">
+							
+							<!-- 短標及短摘 -->
+							<div class="articleheadtitle">全．站．最．新</div>
+							<div class="sidenew">
+								<ul class="sidenewlist">
+									
+									<li><a href="http://news.u-car.com.tw/32027.html">2016巴黎車展：Mercedes-AMG GT C Roadster定裝照亮相</a></li>
+									
+									<li><a href="http://wine.u-car.com.tw/31874.html"><em>酒</em>【當舌尖遇上頂尖】麥卡倫年度限量系列 2016 限定版 EDITION NO.2</a></li>
+									
+									<li><a href="http://news.u-car.com.tw/31997.html">Tesla宣布自動駕駛系統升級，期許確保行車安全</a></li>
+									
+									<li><a href="http://news.u-car.com.tw/32000.html">[CarInsight]Mercedes-Benz GLC的打擊面到底多大呢？</a></li>
+									
+									<li><a href="http://news.u-car.com.tw/32009.html">車輛越發達，駭客越有機可趁？美國司法部組織分析團隊正視車輛駭客問題</a></li>
+									
+									<li><a href="http://news.u-car.com.tw/32011.html">極致聽覺饗宴，Ford全球車型將導入B&O PLAY音響系統</a></li>
+									
+									<li><a href="http://news.u-car.com.tw/32015.html">量身訂做，宏佳騰重機化身伊莉特少女</a></li>
+									
+									<li><a href="http://news.u-car.com.tw/32019.html">調整配備139萬起入手、價格戰開打，BMW 118i與218i AT都會特式推出</a></li>
+									
+									<li><a href="http://news.u-car.com.tw/32026.html">2016巴黎車展：品牌高階休旅雛形，Mitsubishi GT PHEV亮相</a></li>
+									
+									<li><a href="http://promotion.u-car.com.tw/32018.html"><em>促</em>熱銷機種推新色，宏佳騰機車購車優惠</a></li>
+									
+								</ul>
+							</div>
+							
+						</div>
+					</div><!--側邊欄結束-->
+				</div><!--編輯區塊結束-->
 				
 				<div id="footer">
 					<img src="http://news.u-car.com.tw/images/medaibrilliancesystem_logo.gif" alt="" />
 					本站圖文除使用者發表外，屬<strong>旭傳媒</strong>科技(股)版權所有。廣告聯繫：<span style="color:#FF8000;">ad@u-car.com.tw</span><br />
 					c2016 <span>Media</span>Brilliance System Corporation. All Rights Reserved.
 				</div>
-				
+				<script>
+                  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                  ga('create', 'UA-10586472-2', 'auto');
+                  ga('send', 'pageview');
+
+                </script>
+                <!-- Begin comScore Tag -->
+                <script>
+                  var _comscore = _comscore || [];
+                  _comscore.push({ c1: "2", c2: "14366971" });
+                  (function() {
+                    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+                    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+                    el.parentNode.insertBefore(s, el);
+                  })();
+                </script>
+                <noscript>
+                  <img src="http://b.scorecardresearch.com/p?c1=2&c2=14366971&cv=2.0&cj=1" />
+                </noscript>
+                <!-- End comScore Tag -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQ33LK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PQ33LK');</script>
+<!-- End Google Tag Manager -->
 
 <!--etu-->
 <!-- Google Tag Manager -->
@@ -279,6 +437,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TXJQ2R');</script>
 <!-- End Google Tag Manager -->
 			</div>
+			
 		</div>
 		<script type="text/javascript">
 			(function() {
@@ -301,6 +460,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 					});
 				}
 			});
-        </script>
+
+
+		</script>
 	</body>
 </html>
