@@ -118,53 +118,6 @@
 					currentJs.parentNode.insertBefore(er, currentJs);
 				})();
 		</script>
-			
-		<script type="text/javascript">
-		$(document).ready(function () {
-			var intTop = $('.sidebottomad').offset().top;
-			var strTop = intTop + 'px';
-			$(window).scroll(function () {
-				var contentHeight = $('.contbody').height();
-				var sidebarHeight = $('.sidebar').height();
-					$('.sidebar').css({
-						'height': contentHeight + 'px'
-					});
-				var length = $('.contbody').height() - $('.sidebottomad').height() + $('.contbody').offset().top;
-				var scroll = $(this).scrollTop();
-				var height = $('.sidebottomad').height() + 'px';
-
-				if (scroll < intTop) {
-					$('.sidebottomad').css({
-						'position': 'relative',
-						'top': 'auto'
-					});
-
-				} else if (scroll > length) {
-					$('.sidebottomad').css({
-						'position': 'absolute',
-						'bottom': '0',
-						'top': 'auto'
-					});
-
-				} else {
-					$('.sidebottomad').css({
-						'position': 'relative',
-						'top': scroll - intTop + 'px'
-					});
-				}
-			});
-		});
-		</script>
-		<script type="text/javascript">
-			var _pop = _pop || [];
-			_pop.push(["_set_read_categoryName","news"]);
-
-			(function() {
-				var pa = document.createElement("script"); pa.type = "text/javascript"; pa.charset = "utf-8"; pa.async = true;
-				pa.src = window.location.protocol + "//api.popin.cc/searchbox/u-car.js";
-				var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(pa, s);
-			})();
-		</script>
 	</head>
 
 	<body>
@@ -213,105 +166,11 @@
 						</div>
 					</div>
 				</div>
-				<!-- OneAD 宣告與查詢 開始 -->
-				<script type="text/javascript">
-					var ONEAD = {};
-					ONEAD.channel =  75; // U-Car
-					ONEAD.volume =  0.2; // range is 0 to 1 (float)
-					ONEAD.slot_limit = {width: 997, height: 410};
-					// optional(s)
-					ONEAD.slot_limit_multiple = {
-						inread: {
-							width: 640,
-							height: 390
-						}
-					};
-					ONEAD.response_freq = {start:1, step: 30};
-					ONEAD.category = "-1";
-					ONEAD.response_freq_multiple = {
-						incover: "1,2",
-						instream: "1,4,7,10,13,16,19,22,25,28,31,34,37,40,43,46,49,52,55,58,61,64,67,70,73,76,79,82,85,88,91,94,97"
-					};
-					ONEAD.cmd = ONEAD.cmd || [];
-				</script>
-				<script type="text/javascript">
-					// For OneAD, DON'T MODIFY the following
-					if (typeof(ONEAD) !== "undefined"){
-						ONEAD.uid = "1000038";
-						ONEAD.external_url = "http://onead.onevision.com.tw/"; // base_url, post-slash is necessary
-						ONEAD.wrapper = 'ONEAD_player_wrapper';
-						ONEAD.wrapper_multiple = {
-							instream: "ONEAD_player_wrapper", // equals to inpage
-							inread: "ONEAD_inread_wrapper",
-							incover: "ONEAD_incover_wrapper"
-						};
-					}
-					if (typeof window.isip_js == "undefined") {
-						(function() {
-							var src = 'http://ad-specs.guoshipartners.com/static/js/isip.js';
-							var js = document.createElement('script');
-							js.async = true;
-							js.type = 'text/javascript';
-							var useSSL = 'https:' == document.location.protocol;
-							js.src = src;
-							var node = document.getElementsByTagName('script')[0];
-							node.parentNode.insertBefore(js, node.nextSibling); // insert after
-						})();
-					}
-				</script>
-				<script type="text/javascript">
-					ONEAD_on_get_response = function(param){
-						// if there is no pid, param is {}, it's not null
-						if (param === null || param.pid === undefined){
-							// OneAD 沒待播廣告， 在此插播其他廣告格式
-						}else{
-							var t = setInterval(function(){
-								if (ONEAD_is_above(100)){    }
-							}, 1000);
-						}
-					}
-					// 這個函式名稱是固定的，廣告播放完畢會呼叫之
-					function changeADState(obj){
-						if (obj.newstate == 'COMPLETED' || obj.newstate == 'DELETED' ){
-							if (ONEAD.play_mode == 'incover'){
-								// remove the dimming block
-								ONEAD_cleanup(ONEAD.play_mode);
-							}else{
-								ONEAD_cleanup();
-							}
-							// 插入原 popup 訊息框
-						}
-					}
-				</script>
-				<!-- OneAD 宣告與查詢 結束 -->
-				<div id="div-onead-ad">
-					<script type="text/javascript">
-						if (typeof(ONEAD) !== "undefined"){
-							ONEAD.cmd = ONEAD.cmd || [];
-							ONEAD.cmd.push(function(){
-								ONEAD_slot('div-onead-ad');
-							});
-						}
-					</script>
-				</div>
-				<!-- InPage 廣告插入點(結束) -->
-				<!-- InCover 廣告插入點(開 始) -->
-				<div id="div-incover-ad">
-					<script type="text/javascript">
-						if (typeof(ONEAD) !== "undefined"){
-							ONEAD.cmd = ONEAD.cmd || [];
-							ONEAD.cmd.push(function(){
-								ONEAD_slot('div-incover-ad', 'incover');
-							});
-						}
-					</script>
-				</div>
-				<!-- InCover 廣告插入點(結束) -->
-
-				<div class="channel-title clearfix">
-					<img src="http://news.u-car.com.tw/images/ct-news.gif" alt="車壇新聞" />
+				
+                <div class="channel-title clearfix">
+					<img src="http://feature.u-car.com.tw/images/ct-feature.gif" alt="專題報導" />
 					<div class="channel-search">
-						<form method="post" action="/search.asp"><input type="text" name="keywords" id="keywords" class="search-input" style="width:230px;" /><input type="submit" name="" value="搜尋 新聞" class="search-button" /></form>
+						<form method="post" action="/search.asp"><input type="text" name="keywords" id="keywords" class="search-input" style="width:230px;" /><input type="submit" name="" value="搜尋 專題" class="search-button" /></form>
 					</div>
 		        <script type="text/javascript">
                     $(function() {
@@ -340,82 +199,74 @@
                     });
 		        </script>
 				</div>
-				<div class="top clearfix">
-					<div class="ad" style="position: relative; width: 970px;">
-	                    <!-- /43582588/ucar_news_97090_1 -->
-                        <div id='div-gpt-ad-pushdown' style='height:90px; width:970px;'>
-                        <script type='text/javascript'>
-                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-pushdown'); });
-                        </script>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-				</div>
-				<!-- 955px banner -->
 				
 				
 				<!--編輯區塊開始-->
 				<div class="content clearfix">
-					
-					
-	                
-	                
-					
-					
-				</div><!--編輯區塊結束-->
-				
-				
-				<div id="bigad">
-					<div class="bigad_line">
-						<!-- /43582588/ucar_news_920400_1 -->
-						<div id='div-gpt-ad-1452652401118-132' style='height:400px; width:920px;'>
-						<script type='text/javascript'>
-						googletag.cmd.push(function() { googletag.display('div-gpt-ad-1452652401118-132'); });
-						</script>
-						</div>
-					</div>
-				</div>
-				
+				    <link rel="stylesheet" href="css/xuestyle.css">	
+					<div id="my-wrap">
+					    <div id="page-title">
+					        <img src="images/pic_banner.jpg" alt="BMW 3Series/4Series 徹底剖析">
+				        </div>
+				        <div id="box_video" style="background: url(../images/bg_video.jpg) no-repeat">
+				            <video class="my-video" width="480" height="270" controls>
+                                <source src="video/test.ogg" type="video/ogg">
+                                <source src="media/BMW-3Series-2015-Advert.mp4" type="video/mp4">
+                                您的瀏覽器不支援此 HTML5 影片標籤</video>
+                        </div>
+                        
+                        <div id="box_analyze">
+                            <ul>
+                                <li>
+                                    <a href="content.html"><img src="images/pic_analyze-01.jpg" alt="*"></a>
+                                    <a href="content.html"><h4>BMW新一代3 Series有望2017法蘭克福車展亮相，將首度推出純電動車型</h4></a>
+                                    <p>BMW 自從開發旗下插電式油電混合動力系統跑車i8，就對油電混合動力研究出一番心得，BMW為3系列加入油電混合新成員330e...</p></li>
+                                <li>
+                                    <a href="content.html"><img src="images/pic_analyze-02.jpg" alt="*"></a>
+                                    <a href="content.html"><h4>BMW 330e 深藏不露，油電混合生力軍出陣</h4></a>
+                                    <p>BMW 自從開發旗下插電式油電混合動力系統跑車i8，就對油電混合動力研究出一番心得，BMW為3系列加入油電混合新成員330e...</p></li>
+                                <li>
+                                    <a href="content.html"><img src="images/pic_analyze-03.jpg" alt="*"></a>
+                                    <a href="content.html"><h4>這一次、變心毫不遲疑─BMW 340i 3.0T海外試駕</h4></a>
+                                    <p>BMW 自從開發旗下插電式油電混合動力系統跑車i8，就對油電混合動力研究出一番心得，BMW為3系列加入油電混合新成員330e...</p></li>
+                            </ul>
+                        </div>
+                        
+                        
+                        <div id="box_extend">
+                            <div id="extend-title" style="background: url(../images/bg_extend-title.png) no-repeat">
+                                <h3>延‧伸‧閱‧讀</h3></div>
+                            <div id="extend-list">
+                                <ul>
+                                    <li>
+                                        <a href="content-1.html"><img src="images/pic_extend-01.jpg" alt="*"></a>
+                                         <div class="extend-info">
+                                            <a href="content.html"><h4>動力更新、配備調整，BMW公佈2017年式4 Series規配及預售價格</h4></a>
+                                            <p>BMW臺灣總代理汎德繼2016年2月下旬公佈了國內販售全車系2016年式車型價格之後
+        ，日前再度公佈了旗下2017年式4 Series規配及預售價格，其中包含了4 Series Coupé、4 Series Gran Coupé及4 Series Convertible車系皆有所更動...</p>                                           
+                                         </div></li>
+                                    <li>
+                                        <a href="content-1.html"><img src="images/pic_extend-01.jpg" alt="*"></a>
+                                         <div class="extend-info">
+                                            <a href="content.html"><h4>動力更新、配備調整，BMW公佈2017年式4 Series規配及預售價格</h4></a>
+                                            <p>BMW臺灣總代理汎德繼2016年2月下旬公佈了國內販售全車系2016年式車型價格之後
+        ，日前再度公佈了旗下2017年式4 Series規配及預售價格，其中包含了4 Series Coupé、4 Series Gran Coupé及4 Series Convertible車系皆有所更動...</p>                                           
+                                         </div></li>
+                                </ul>
+                            </div>
+                            <div id="extend-adad"> 
+                                <img src="images/pic_abcar.jpg" alt="*">
+                            </div>    
+                        </div>
+                    </div>
+	            </div><!--編輯區塊結束-->
 				
 				<div id="footer">
 					<img src="http://news.u-car.com.tw/images/medaibrilliancesystem_logo.gif" alt="" />
 					本站圖文除使用者發表外，屬<strong>旭傳媒</strong>科技(股)版權所有。廣告聯繫：<span style="color:#FF8000;">ad@u-car.com.tw</span><br />
 					c2016 <span>Media</span>Brilliance System Corporation. All Rights Reserved.
 				</div>
-				<script>
-                  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-                  ga('create', 'UA-10586472-2', 'auto');
-                  ga('send', 'pageview');
-
-                </script>
-                <!-- Begin comScore Tag -->
-                <script>
-                  var _comscore = _comscore || [];
-                  _comscore.push({ c1: "2", c2: "14366971" });
-                  (function() {
-                    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
-                    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
-                    el.parentNode.insertBefore(s, el);
-                  })();
-                </script>
-                <noscript>
-                  <img src="http://b.scorecardresearch.com/p?c1=2&c2=14366971&cv=2.0&cj=1" />
-                </noscript>
-                <!-- End comScore Tag -->
-
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQ33LK"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PQ33LK');</script>
-<!-- End Google Tag Manager -->
+				
 
 <!--etu-->
 <!-- Google Tag Manager -->
@@ -427,15 +278,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TXJQ2R');</script>
 <!-- End Google Tag Manager -->
-			</div>
-			<div class="stickyad">
-				<!-- /43582588/ucar_news_160600_1 -->
-<div id='div-gpt-ad-1452652401118-122' style='height:600px; width:160px;'>
-<script type='text/javascript'>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1452652401118-122'); });
-</script>
-</div>
-
 			</div>
 		</div>
 		<script type="text/javascript">
@@ -459,8 +301,6 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1452652401118-122'
 					});
 				}
 			});
-
-
-		</script>
+        </script>
 	</body>
 </html>
