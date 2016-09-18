@@ -39,20 +39,25 @@
     display: inline-block;
     width: 300px;
     margin-right: 23px}
-#box_analyze li:nth-child(3){
+#box_analyze li:nth-child(3),
+#box_related li:nth-child(3){
     margin-right: 0}
 #box_analyze img{
     display: block;
     margin: 0 0 15px;
     padding: 0}
 #box_analyze h4,
-#extend-list h4{
+#extend-list h4,
+#box_related h4,
+#box_analyze-side h4{
     font-size: 16px;
     font-weight: bold;
     line-height: 22px;
     padding: 0 10px 8px}
 #box_analyze p,
-#extend-list p{
+#extend-list p,
+#box_related p,
+#box_analyze-side p{
     font-size: 13px;
     line-height: 22px;
     padding: 0 10px;
@@ -104,3 +109,32 @@
     font-size: 0;
 	height: 0;
 	visibility: hidden}
+
+#box_related{
+    display: block;
+    padding-bottom:30px}
+#box_related li{
+    display: block;
+    float: left;
+    width: 202px;
+    margin-right: 16px}
+#box_related img{
+    display: block;
+    width: 202px;
+    margin: 0 0 15px;
+    padding: 0}
+
+#box_analyze-side{
+    display: block;
+    width: 270px;
+    margin: 0 auto}
+#box_analyze-side li{
+    display: block;
+    width: 100%;
+    margin-bottom: 25px}
+#box_analyze-side img{
+    display: block;
+    width: 270px;
+    margin: 0 0 15px;
+    padding: 0}
+
