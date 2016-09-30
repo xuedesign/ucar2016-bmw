@@ -38,7 +38,8 @@
 #box_analyze li{
     display: inline-block;
     width: 300px;
-    margin-right: 23px}
+    margin-right: 23px;
+    vertical-align: top}
 #box_analyze li:nth-child(3),
 #box_related li:nth-child(3){
     margin-right: 0}
@@ -137,4 +138,5 @@
     width: 270px;
     margin: 0 0 15px;
     padding: 0}
+.share{ vertical-align: top}
 
