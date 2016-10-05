@@ -140,3 +140,35 @@
     padding: 0}
 .share{ vertical-align: top}
 
+.format .basic_table tr:first-child td, 
+.fullwidth .basic_table tr:first-child td {
+    background: none;
+    border-bottom: 1px solid #808080;}
+.format .basic_table tr td:first-child, 
+    .format .basic_table tr td:last-child {
+    padding: 6px 0;}
+.articleheadtitle-2{
+    background: url(../images/subtitle_bg.jpg) 0 0 repeat-x;
+    border: #808080 1px solid;
+    color: #000;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: center}
+.contbody .basic_table{
+    font-family: Tahoma, LiHei Pro, "儷黑體", Microsoft JhengHei, "微軟正黑體", PMingliu, "新細明體", sans-serif;
+    font-size: 13px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse; 
+    border-spacing: 0}
+.contbody .basic_table th{ 
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #9a9a9a}
+.contbody .basic_table td{
+    padding: 10px 0;
+    border-bottom: 1px dotted #9a9a9a}
+.td-left{ text-align: left}
+
